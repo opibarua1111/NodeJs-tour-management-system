@@ -40,7 +40,8 @@ const tourSchema = mongoose.Schema(
 tourSchema.methods.logger = function () {
   console.log(`Data saved for ${this.name}`);
 };
+var collectionName = "tours";
 
-const Tour = mongoose.model("Tour", tourSchema);
+const Tours = mongoose.model("Tours", tourSchema, collectionName);
 
-module.exports = Tour;
+module.exports = Tours;

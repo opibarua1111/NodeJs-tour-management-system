@@ -13,5 +13,6 @@ exports.getToursServices = async (filters, queries) => {
 
 exports.createTourServices = async (data) => {
   const tour = await Tour.create(data);
+  console.log(tour);
   return tour;
 };
